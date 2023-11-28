@@ -242,6 +242,7 @@ input[type=submit]{
     display: inline-block;
     right: 25px;
     top: 5px;
+    white-space: nowrap;
 }
 
 .one h3::before{
