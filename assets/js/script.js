@@ -15,7 +15,7 @@ const mouse = {
 }
 
 const params = {
-    size: .1,
+    size: .05,
     tail: {
         dotsNumber: 25,
         spring: 1.4,
@@ -49,7 +49,6 @@ for (let i = 0; i < params.tail.dotsNumber; i++) {
 
 let uniforms;
 const gl = initShader();
-createControls();
 
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
