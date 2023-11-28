@@ -1,7 +1,21 @@
 @font-face {
     font-family: 'Roboto';
     src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: 400;
 }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
 
 *{
     padding: 0;
@@ -16,12 +30,12 @@
 }
 
 h1{
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 600;
 }
 
 h2{
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: 600;
 }
 
@@ -37,6 +51,22 @@ p{
 
 span{
     font-size: 1.5em;
+}
+
+input{
+    width: 900px;
+    height: 90px;
+    text-align: center;
+    border: 0;
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.1);
+    font-size: 1.75em;
+}
+
+input[type=submit]{
+    background-color: #FF3571;
+    width: 400px;
+    border-radius: 10px;
+    color: white;
 }
 
 .logo{
@@ -62,6 +92,7 @@ flex-wrap: nowrap;
 justify-content: flex-end;
 position: relative;
 bottom: 12em;
+z-index: -1;
 }
 
 .float-img img:nth-of-type(2){
@@ -96,13 +127,16 @@ bottom: 12em;
 
 
 .gallery{
-    width: 100%;
     display: flex;
     justify-content: center;
+    background: url(../img/images.jpg) center/contain no-repeat;
+    height: 1000px;
+    width: 100%;
 }
 
 .about{
-    padding-top: 400px;
+    padding-top: 200px;
+    margin: 100px;
 }
 
 .idea{
@@ -111,10 +145,11 @@ bottom: 12em;
     align-items: center;
     width: 100%;
     margin: 0 auto;
+    gap:100px;
 }
 
 .about div:nth-of-type(1) h2{
-    width: 400px;
+    width: 300px;
 }
 
 .about div:nth-of-type(1) span::before{
@@ -124,11 +159,9 @@ bottom: 12em;
 
 .about .paragraph{
     display: flex;
-    width: 1075px;
     line-height: 3em;
     word-spacing: 0.2em;
-    margin-right: 500px;
-    font-size: 1.25em;
+    width: 850px;
 }
 
 .heading{
@@ -144,9 +177,9 @@ bottom: 12em;
 
 .grid h2{
     margin-top: 200px;
-    margin-left: 650px;
+    margin-left: 250px;
     font-weight: 600;
-    width: 1100px;
+    width: 800px;
 
 }
 
@@ -154,9 +187,9 @@ bottom: 12em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    padding-top: 500px;
+    padding-top: 250px;
     margin: 0 auto;
-    gap: 200px;
+    gap: 100px;
 }
 
 .title{
@@ -182,44 +215,29 @@ bottom: 12em;
     gap: 30px;
 }
 
-.one h3::before{
-    content: url(../img/title02.svg);
-    width: 60px;
-    height: 60px;
+.one h3::before, .two h3::before, .three h3::before, .four h3::before{
+    width: 40px;
+    height: 40px;
     position: relative;
     display: inline-block;
     right: 25px;
-    top: 15px;
+    top: 5px;
+}
+
+.one h3::before{
+    content: url(../img/title02.svg);
 }
 
 .two h3::before{
     content: url(../img/title04.svg);
-    width: 60px;
-    height: 60px;
-    position: relative;
-    display: inline-block;
-    right: 25px;
-    top: 15px;
 }
 
 .three h3::before{
     content: url(../img/title01.svg);
-    width: 60px;
-    height: 60px;
-    position: relative;
-    display: inline-block;
-    right: 25px;
-    top: 15px;
 }
 
 .four h3::before{
     content: url(../img/title03.svg);
-    width: 60px;
-    height: 60px;
-    position: relative;
-    display: inline-block;
-    right: 25px;
-    top: 15px;
 }
 
 .challenge{
@@ -228,7 +246,7 @@ bottom: 12em;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
 }
 
 .challenge p{
@@ -236,6 +254,55 @@ width: 700px;
 text-align: center;
 }
 
+.challenges{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    margin-top:100px;
+    gap: 200px;
+}
+
+.challenge-img img{
+    width: 500px;
+}
+
+.desc{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.desc h4{
+    font-weight: 700;
+    color: #ddd;
+    font-size: 4em;
+}
+
+.desc p{
+    line-height: 2em;
+}
+
+.steps{
+    width: 100px;
+}
+
+.challenge{
+    padding-bottom: 250px;
+}
+
+.love{
+    margin: 20px;
+    margin-left: 200px;
+}
+
+.love p{
+    font-weight: 300;
+}
 
 @keyframes float {
 	0% {
