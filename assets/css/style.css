@@ -16,6 +16,17 @@
     font-weight: 700;
 }
 
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-30px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
 
 *{
     padding: 0;
@@ -28,7 +39,7 @@
     font-size: 16px;
     --font-accent: #FF3571;
 }
-
+/* Generelles Styling ohne Klassen */
 h1{
     font-size: 4em;
     font-weight: 600;
@@ -69,6 +80,7 @@ input[type=submit]{
     color: white;
 }
 
+/* Header/Hero */
 .logo{
     width: 50px;
     height: 100%;
@@ -87,22 +99,24 @@ input[type=submit]{
 
 
 .float-img{
-display: flex;
-flex-wrap: nowrap;
-justify-content: flex-end;
-position: relative;
-bottom: 12em;
-z-index: -1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 12em;
+    z-index: -1;
 }
 
 .float-img img:nth-of-type(2){
     position: absolute;
-    bottom: 100px;
     animation: float 4s ease-in-out infinite;
+    width: 900px;
+    left: 950px;
+    top: 100px;
 }
 
 .float-img img:nth-of-type(1){
-    width: 100%;
+    width: 1;
     max-width: 1080px;
 }
 
@@ -130,7 +144,7 @@ z-index: -1;
     font-weight: 700;
 }
 
-
+/* Beginn des Inhalts */
 .gallery{
     display: flex;
     justify-content: center;
@@ -297,6 +311,8 @@ text-align: center;
     width: 100px;
 }
 
+/* Footer/Kontakt */
+
 .challenge{
     padding-bottom: 250px;
 }
@@ -308,16 +324,4 @@ text-align: center;
 
 .love p{
     font-weight: 300;
-}
-
-@keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-30px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
 }
