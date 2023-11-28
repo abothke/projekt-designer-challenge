@@ -49,6 +49,7 @@ for (let i = 0; i < params.tail.dotsNumber; i++) {
 
 let uniforms;
 const gl = initShader();
+createControls();
 
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
